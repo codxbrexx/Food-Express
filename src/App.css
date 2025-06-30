@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import 'react-toastify/dist/ReactToastify.css';
+
+/* Basic theme styles */
+:root {
+  --bg-color-light: #f4efef;
+  --text-color-light: #333;
+  --card-bg-light: #fff;
+  --card-hover-bg-light: #e0f2fe; /* blue-50 */
+  --card-hover-text-light: #4a4a4a; /* gray-800 */
+  --border-color-light: #bfdbfe; /* blue-300 */
+  --shadow-color-light: rgba(59, 130, 246, 0.25); /* blue-500/40 */
+  --nav-bg-light: #f3f4f6; /* gray-100 */
+  --footer-bg-light: #a4a6a9; /* gray-700 */
+  --footer-text-light: #bfdbfe; /* blue-300 */
+  --footer-border-light: #d1d5db; /* gray-300 */
+  --blue-primary: #3b82f6; /* blue-500 */
+  --blue-secondary: #60a5fa; /* blue-400 */
+  --red-error: #ef4444; /* red-500 */
+}
+
+.dark-theme {
+  --bg-color-light: #1a202c; /* dark gray */
+  --text-color-light: #e2e8f0; /* light gray */
+  --card-bg-light: #4c535f; /* darker gray */
+  --card-hover-bg-light: #4a5568; /* even darker gray */
+  --card-hover-text-light: #e2e8f0;
+  --border-color-light: #4299e1; /* blue-600 */
+  --shadow-color-light: rgba(66, 153, 225, 0.4); /* blue-600/40 */
+  --nav-bg-light: #2d3748;
+  --footer-bg-light: #1a202c;
+  --footer-text-light: #90cdf4; /* light blue */
+  --footer-border-light: #4a5568;
+  --blue-primary: #63b3ed; /* light blue */
+  --blue-secondary: #90cdf4; /* lighter blue */
+  --red-error: #fc8181; /* light red */
+}
+
+body {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply theme variables to Tailwind classes where appropriate */
+.bg-gray-100 { background-color: var(--nav-bg-light); }
+.bg-white { background-color: var(--card-bg-light); }
+.text-gray-700 { color: var(--text-color-light); }
+.text-gray-300 { color: var(--text-color-light); } /* Adjust for footer */
+.bg-gray-700 { background-color: var(--footer-bg-light); }
+.border-gray-300 { border-color: var(--footer-border-light); }
+.text-blue-500 { color: var(--blue-primary); }
+.text-blue-400 { color: var(--blue-secondary); }
+.bg-blue-400 { background-color: var(--blue-secondary); }
+.hover\:bg-blue-50:hover { background-color: var(--card-hover-bg-light); }
+.hover\:text-gray-800:hover { color: var(--card-hover-text-light); }
+.hover\:border-blue-500:hover { border-color: var(--blue-primary); }
+.shadow-blue-500\/40 { box-shadow: 0 10px 15px -3px var(--shadow-color-light), 0 4px 6px -4px var(--shadow-color-light); }
+.border-blue-400 { border-color: var(--blue-secondary); }
+.text-red-400 { color: var(--red-error); }
+.hover\:text-red-600:hover { color: var(--red-error); } /* Adjust if needed */
+
