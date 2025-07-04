@@ -6,6 +6,7 @@ import { food_items } from "../food";
 import { useSelector } from "react-redux";
 import { ThemeContext } from "../context/ThemeContext"; // Import ThemeContext
 import ThemeToggle from "./ThemeToggle"; // Import ThemeToggle
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   let { input, setInput, cat, setCate, showCard, setShowCard } =
@@ -103,12 +104,12 @@ className="w-full text-gray-800 outline-none text-[12px] md:text-[16px] p-2 roun
           <FaShoppingBag className="w-[20px] h-[20px] text-blue-500" />
         </div>
         {/* Login and Signup Buttons */}
-        <button className="hidden md:block bg-white text-blue-500 hover:border-1 hover:text-white px-4 py-2 rounded-md shadow-lg  cursor-pointer transition duration-200">
+        <Link to="/login" className="hidden md:block bg-white text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md shadow-lg cursor-pointer transition duration-200">
           Login
-        </button>
-        <button className="hidden md:block bg-white text-blue-500 hover:border-1 hover:text-white px-4 py-2 rounded-md shadow-lg  cursor-pointer transition duration-200">
+        </Link>
+        <Link to="/signup" className="hidden md:block bg-white text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md shadow-lg cursor-pointer transition duration-200">
           Signup
-        </button>
+        </Link>
       </div>
     </div>
   );
